@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seden Adea School</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e0f2f1, #f1f8e9);
+      color: #031A09;
+    }
+
+    header {
+      background-color: #034614;
+      color: #FDFFF6;
+      text-align: center;
+      padding: 30px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .icon {
+      width: 120px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #294E28;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      overflow-y: auto;
+      padding: 20px;
+      transition: left 0.3s ease;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      z-index: 998;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar h2 {
+      color: #E2F87B;
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #E2F87B;
+      font-weight: 500;
+      display: block;
+      padding: 8px;
+      border-radius: 5px;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background-color: #316C40;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 26px;
+      background-color: #294E28;
+      color: #FDFFF6;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 999;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar.active ~ .toggle-btn {
+      left: 240px;
+    }
+
+    .container {
+      padding: 30px;
+      margin-top: 20px;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .text-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .text-section h2 {
+      color: #294E28;
+      margin-bottom: 15px;
+    }
+
+    .text-section p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #034614;
+      color: #FDFFF6;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      text-decoration: none;
+      color: #FDFFF6;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-links img {
+      width: 20px;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .sidebar.active ~ .toggle-btn {
+        left: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/icon.png" alt="School Logo" class="icon">
+    <h1>SADEN ADEA SECONDARY SCHOOL</h1>
+    <p>Welcome to Our Official Website</p>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>MENU</h2>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="school-directory.html">School Teachers & Director</a></li>
+      <li><a href="top-students.html">Top Students</a></li>
+      <li><a href="facilities.html">Kindness Activities</a></li>
+      <li><a href="rules-regulations.html">School Rules & Regulations</a></li>
+      <li><a href="the-school.html">The School Location</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </div>
+
+  <!-- Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="main">
+      <div class="text-section">
+        <h2>Education is the Key to Knowledge</h2>
+        <p>
+          Seden Adea Secondary School, located in the heart of Ethiopia, is dedicated to academic excellence and cultural enrichment. With spacious classrooms and a robust curriculum, the school fosters critical thinking and curiosity among its students. Emphasizing extracurricular activities like sports, music, and drama, Seden Adea cultivates creativity and teamwork. Various clubs encourage leadership and personal growth, making the school a vibrant community where friendships flourish. Committed to social responsibility, the school engages students in outreach programs, preparing them to become compassionate and informed citizens. Ultimately, Seden Adea nurtures future leaders with resilience, knowledge, and integrity.
+        </p>
+      </div>
+      <div class="image-section">
+        <img src="images/image1.jpg" alt="School Environment">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact Us</p>
+    <div class="contact-links">
+      <a href="https://t.me/yourusername" target="_blank">
+        <img src="images/telegram.png" alt="Telegram Icon"> Telegram
+      </a>
+      <a href="tel:+1234567890">
+        <img src="images/phone.png" alt="Phone Icon"> Phone
+      </a>
+      <a href="mailto:youremail@example.com">
+        <img src="images/email.png" alt="Email Icon"> Email
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
