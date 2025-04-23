@@ -1,76 +1,93 @@
+/* General body and background styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #2E5D3D; /* Dark Green */
+    color: #F1F8E0; /* Light Beige */
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom right, #b2dfdb, #e0f7fa); /* Nice gradient background */
 }
 
+/* Container style */
 .container {
-    max-width: 400px;
+    max-width: 600px;
     margin: 50px auto;
+    background-color: #D9DCA3; /* Light Olive */
     padding: 20px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading styles */
 h1 {
+    color: #A7B635; /* Olive Green */
     text-align: center;
-    color: #00796b;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 h2 {
-    margin-bottom: 20px;
+    color: #5B6D35; /* Medium Green */
     text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2E5D3D; /* Dark Green */
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
+input[type="text"], input[type="password"] {
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #b2dfdb;
-    border-radius: 4px;
+    font-size: 16px;
+    border: 1px solid #5B6D35; /* Medium Green */
+    border-radius: 5px;
+    background-color: #F1F8E0; /* Light Beige */
+    color: #2E5D3D; /* Dark Green */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #A7B635; /* Olive Green */
+    outline: none;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .login-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #00796b;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: #A7B635; /* Olive Green */
+    color: #F1F8E0; /* Light Beige */
 }
 
 .login-btn:hover {
-    background-color: #004d40;
-}
-
-.gap {
-    height: 15px;
+    background-color: #5B6D35; /* Medium Green */
 }
 
 .forgot-password-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff7043;
-    color: white;
+    background-color: #D9DCA3; /* Light Olive */
+    color: #2E5D3D; /* Dark Green */
+    text-decoration: underline;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 .forgot-password-btn:hover {
-    background-color: #bf360c;
+    background-color: #A7B635; /* Olive Green */
+    color: #F1F8E0; /* Light Beige */
 }
 
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -80,21 +97,21 @@ input[type="password"] {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
+    background-color: #F1F8E0; /* Light Beige */
+    margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #5B6D35; /* Medium Green */
     width: 80%;
-    max-width: 400px;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .close {
-    color: #aaa;
+    color: #5B6D35; /* Medium Green */
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -102,7 +119,7 @@ input[type="password"] {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #A7B635; /* Olive Green */
     text-decoration: none;
     cursor: pointer;
 }
